@@ -1,0 +1,30 @@
+# ── Core Web Server ────────────────────────────────────────────
+flask
+werkzeug
+flask-cors
+gunicorn
+
+# ── Environment & Utilities ────────────────────────────────────
+python-dotenv
+requests
+
+# ── AI APIs ────────────────────────────────────────────────────
+google-generativeai
+
+# ── Translation ────────────────────────────────────────────────
+deep-translator
+
+# ── Vision / ML ────────────────────────────────────────────────
+# torch and torchvision are only used for the local model fallback.
+# They are NOT installed on Render free tier (too large).
+# The app auto-falls back to cloud vision APIs (Gemini/OpenRouter).
+# Uncomment below only if running locally WITH model weights:
+# torch
+# torchvision
+# transformers
+# Pillow
+
+# ── Speech-to-Text ─────────────────────────────────────────────
+SpeechRecognition
+pydub
+soundfile

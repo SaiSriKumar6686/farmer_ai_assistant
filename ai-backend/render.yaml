@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: kisan-ai-shield-backend
+    env: python
+    region: singapore  # Closest to India
+    plan: free
+    rootDir: ai-backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --timeout 120 --workers 1 app:app
+    healthCheckPath: /health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false        # Set in Render dashboard
+      - key: EXPO_PUBLIC_GEMINI_API_KEY
+        sync: false
+      - key: EXPO_PUBLIC_WEATHER_KEY
+        sync: false
+      - key: EXPO_PUBLIC_DATA_GOV_API_KEY
+        sync: false
+      - key: AI_API_KEY
+        sync: false
+      - key: HF_HUB_OFFLINE
+        value: "1"

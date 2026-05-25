@@ -1,0 +1,64 @@
+# ── Dependencies ───────────────────────────────────────────────
+node_modules/
+ai_env/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# ── Expo / React Native ─────────────────────────────────────────
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+.metro-health-check*
+
+# ── Build outputs ───────────────────────────────────────────────
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.kotlin/
+/ios/
+/android/
+
+# ── Secrets — NEVER COMMIT ─────────────────────────────────────
+.env
+.env.local
+.env*.local
+google-service-account.json
+
+# ── Python ML model weights (too large for git) ─────────────────
+*.pth
+*.pt
+*.h5
+*.pkl
+*.bin
+*.onnx
+
+# ── Logs & temp ─────────────────────────────────────────────────
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+tmp/
+tsc_output.txt
+
+# ── IDE ─────────────────────────────────────────────────────────
+.DS_Store
+.vscode/settings.json
+*.tsbuildinfo
+
+# ── Misc ────────────────────────────────────────────────────────
+app-example/
+ai-backend/testing/
+ai-backend/__pycache__/
+ai-backend/features/__pycache__/
+ai-backend/features/_archive/
+HACKATHON_PITCH_MASTER.md
+PROJECT_METADATA.json
+PROJECT_SUMMARY.md
+SYSTEM_DEPENDENCIES.txt
