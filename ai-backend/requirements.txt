@@ -14,17 +14,15 @@ google-generativeai
 # ── Translation ────────────────────────────────────────────────
 deep-translator
 
-# ── Vision / ML ────────────────────────────────────────────────
-# torch and torchvision are only used for the local model fallback.
-# They are NOT installed on Render free tier (too large).
-# The app auto-falls back to cloud vision APIs (Gemini/OpenRouter).
-# Uncomment below only if running locally WITH model weights:
-# torch
-# torchvision
-# transformers
-# Pillow
+# ── Image Processing (required by disease_vision_engine.py) ────
+Pillow
 
 # ── Speech-to-Text ─────────────────────────────────────────────
 SpeechRecognition
 pydub
 soundfile
+
+# ── Vision / ML (optional — only needed for local PyTorch model) ─
+# torch, torchvision, transformers are NOT installed on Render free tier.
+# disease_vision_engine.py gracefully falls back to Gemini Vision API
+# when torch is not available (try/except at top of that file).
