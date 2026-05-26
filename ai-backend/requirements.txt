@@ -1,25 +1,6 @@
-# ── Core Web Server ──────────────────────────────────────────────
 flask
-werkzeug
 flask-cors
 gunicorn
-
-# ── Environment & Utilities ──────────────────────────────────────
+Pillow
 python-dotenv
 requests
-
-# ── AI APIs ──────────────────────────────────────────────────────
-google-generativeai
-
-# ── Translation ──────────────────────────────────────────────────
-deep-translator
-
-# ── Image Processing ─────────────────────────────────────────────
-Pillow
-
-# ── NOTE: The following are intentionally excluded for Render ────
-# SpeechRecognition  → needs pyaudio (C system lib, not on Render free tier)
-# pydub              → needs ffmpeg binary (not on Render free tier)
-# soundfile          → needs libsndfile (C system lib)
-# torch / torchvision → 2GB+, not needed (Gemini Vision used as cloud fallback)
-# All voice features gracefully degrade via lazy-import in ai_pipeline.py
